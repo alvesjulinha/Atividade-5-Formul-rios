@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #5c3948;
+            display: flex;
+            justify-content: center;
+        }
+
+        .formulario {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #f8bbd0;
+            box-shadow: 0 0 10px rgba(223, 25, 25, 0.1);
+            width: 800px;
+        }
+
+        .formulario div{
+            margin-bottom: 15px;
+        }
+
+        .formulario label {
+            color: #5c3948;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ec80a8;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ec80a8;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #f8bbd0;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a83d66;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="formulario">
+
+        <h1>Formulário de Cadastro</h1>
+
+        <div class="campo-nome">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+        </div>
+
+        <div class="campo-email">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="campo-senha">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+        </div>
+
+        <div class="campo-nascimento">
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento">
+        </div>
+
+        <div class="campo-curso">
+            <label for="curso">Curso</label>
+            <select name="curso" id="curso">
+                <option value="computacao">Computação</option>
+                <option value="engenharia">Engenharia</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+
+        <div class="campo-sexo">
+            <label for="sexo">Sexo:</label>
+            <input type="radio" name="sexo" id="masculino" value="masculino">
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="sexo" id="feminino" value="feminino">
+            <label for="feminino">Feminino</label>
+        </div>
+
+        <div class="campo-interesses">
+            <label for="interesses">Interesses:</label>
+            <input type="checkbox" name="interesses" id="ia" value="ia">
+            <label for="ia">Inteligência Artificial</label>
+            <input type="checkbox" name="interesses" id="desenvolvimento" value="desenvolvimento">
+            <label for="desenvolvimento">Desenvolvimento Web</label>
+            <input type="checkbox" name="interesses" id="dados" value="dados">
+            <label for="dados">Análise de Dados</label>
+            <input type="checkbox" name="interesses" id="jogos" value="jogos">
+            <label for="jogos">Jogos</label>
+        </div>
+
+        <div class="campo-comentarios">
+            <label for="comentarios">Comentários:</label>
+            <textarea name="comentarios" id="comentarios" cols="30" rows="5"></textarea>
+        </div>
+
+        <div class="imagem">
+            <label for="foto">Envie sua foto:</label>
+            <input type="file" name="foto" id="foto" accept="image/*">
+        </div>
+
+        <div class="campo-enviar">
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+
+</html>
